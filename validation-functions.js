@@ -13,9 +13,9 @@ $(document).ready(function() {
 
         // Use Ajax to submit form data
         var url = 'https://script.google.com/macros/s/AKfycbyuKxFeXnQe98ooDFWa4XzagQCSt2YL-W9kIXzN_DUd1I5eM_U/exec';
-        var redirectUrl = 'success-page.html';
         // show the loading 
-        $('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
+            $('#id02').css("display","block");
+
         var jqxhr = $.post(url, $form.serialize(), function(data) {
             console.log("Success! Data: " + data.statusText);
         })
@@ -24,6 +24,6 @@ $(document).ready(function() {
                 // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
               
             });
-
     });
+  
 });

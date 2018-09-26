@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
 
 <style>
 .modalblur {
-     /* Hidden by default */
+    display: none;  /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100000; /* Sit on top */
     left: 0;
@@ -41,8 +41,10 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.97); /* Black w/ opacity */
     padding-top: 60px;
+    text-align: center;
+    padding-top: 150px;
 }
 
 /* Modal Content/Box */
@@ -53,6 +55,13 @@
     width: 340px;height:540px;border-radius:10px; /* Could be more or less, depending on screen size */
 }
 
+.modalblur-content2 {
+    background-color:transparent;
+    margin: 0% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 340px;/* Could be more or less, depending on screen size */
+}
+.check-ico{font-size:48px;color:#333;background-color:rgba(238,239,241,1);padding:20px;border-radius:50%;}
+.thanku{color: rgb(238,239,241); font-weight: bold;margin: 15px 0px;}
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
@@ -69,7 +78,8 @@
     to {transform: scale(1)}
 }
 
-.closebtn{background-color: #fff;height: 40px;width: 40px;border-radius: 50%; float: right;display: flex;justify-content: center;align-items: center;margin-top:-38px;margin-right: -30px;opacity: .99;cursor: pointer;font-size: 20px; }
+.closebtn,.closebtn2{background-color: #fff; display: flex;justify-content: center;align-items: center;padding: 10px; opacity: .99;cursor: pointer;font-size: 20px;float: right;border-radius: 5px; }
+
 .ss{height:500px;width:100%;}
 </style>
 
@@ -130,7 +140,7 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
-<!-- <div id="id01" class="modalblur">  
+<!--set script for close btn... <div id="id01" class="modalblur">  
   <div class="modalblur-content animate">
     <div class="closebtn" onclick="closebtn()" ><b>x</b></div>
    <iframe src="https://events.theknottytales.com/" class="ss">
@@ -562,6 +572,15 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </section>
 
+    <div id="id02" class="modalblur">  
+      <div class="modalblur-content2 animate">
+        <i class="fa fa-check check-ico" ></i>
+        <h2 class="thanku">Thank You</h2>
+        <h4 class="thanku">The form was submitted successfully.</h4>
+       </div>
+              <div style="display: flex;justify-content: center;margin-top: 60px;"><div class="closebtn" onclick="closebtn()" ><b>Closex</b></div></div>
+    </div>
+
    <!-- Footer -->
     <footer>
       <div class="container">
@@ -804,15 +823,16 @@ s0.parentNode.insertBefore(s1,s0);
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
+var modal2 = document.getElementById("id02");
 function closebtn(){
  if (true) {
-   modal.style.display = "none";
+   modal2.style.display = "none";
  }
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modal2) {
+        modal2.style.display = "none";
     }
 }
 </script>
