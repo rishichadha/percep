@@ -1,5 +1,5 @@
-$ .noConflict();
-(document).ready(function() {
+jQuery.noConflict();
+$(document).ready(function() {
     $('#test-form').bootstrapValidator()
     .on('success.form.bv', function(msg) {
         // Prevent form submission
